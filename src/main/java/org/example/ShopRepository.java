@@ -28,7 +28,7 @@ public class ShopRepository {
 
     public void removeById(int id) {
         Product productToRemove = findById(id);
-        if (productToRemove == null) { // проверяем, есть ли искомый товар с данным Id
+        if (productToRemove == null) {
             throw new NotFoundException("Element with id: " + id + " not found");
         }
         Product[] tmp = new Product[products.length - 1];
